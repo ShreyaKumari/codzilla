@@ -1,0 +1,33 @@
+Based on taxable income, the Income Tax is computed as follows:
+    Below : 150000     No tax
+    Between 150000 and 300000  10% tax on income above 150000
+    Between 300000 and 800000  Tax on 300000 plus 20% tax on income above 300000
+    Above 800000   Tax on 800000 plus 30% Tax on income above 800000
+    Super Rich surcharge at 10% of tax  is added to above if taxable income is greater than or equal to 5000000
+Write a function incomeTax which calculates and returns income tax based on taxable income given in parameter ti.
+/*
+ * The function incomeTax accepts integer integer ti (taxable income)
+ * It computes and returns the Income Tax based on the taxable income
+ * Based on taxable income, the Income Tax is computed as follows:
+ *   Below : 150000     No tax
+ *   Between 150000 and 300000  10% tax on income above 150000
+ *   Between 300000 and 800000  Tax on 300000 plus 20% tax on income above 300000
+ *   Above 800000   Tax on 800000 plus 30% Tax on income above 800000
+ *  Super Rich surcharge at 10% of tax  is added to above if taxable income is greater than or equal to 5000000
+ */
+float incomeTax(int ti)
+{
+float iTax=0;
+if(ti<=150000)
+iTax=0;
+if(ti>150000 && ti<=300000)
+iTax=0.1*(ti-150000);
+if(ti>300000 && ti<=800000)
+iTax=0.2*(ti-300000)+ 0.1*(300000-150000);
+if(ti>800000)
+iTax=0.3*(ti-800000)+0.1*(300000-150000)+0.2*(800000-300000);
+if(ti>5000000)
+iTax+=iTax*0.1;
+return iTax;
+
+}
