@@ -1,0 +1,15 @@
+Complete the function to check whether the parameter to the function is even.
+The function should accept an integer parameter i.
+For even parameter return 1 else return 0.
+/*
+ * The isEven function returns 1 if input parameter is even, Otherwise it returns 0
+ * The function should accept an integer parameter i
+ */
+int isEven(int i)
+{
+
+if(!(i%2))
+return 1;
+return 0;
+
+}
