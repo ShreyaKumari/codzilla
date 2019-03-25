@@ -1,0 +1,9 @@
+Provide the missing declaration
+int main() 
+{
+//below line is the answer
+int t;
+
+    t = 5;
+    return(0);
+}
